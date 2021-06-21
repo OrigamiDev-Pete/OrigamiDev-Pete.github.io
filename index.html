@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peter de Vroom</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+</head>
+<body class="gradient">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-light navbar-expand bg-white fixed-top shadow-sm" style="z-index: 1;">
+        <div class="container-fluid">
+            <a class="navbar-brand" style="margin-left: 10%;" href="#">Peter de Vroom</a>
+            <div class="navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/OrigamiDev-Pete" target="_blank">
+                            <span>Github</span>
+                            <img src="assets/GitHub-Mark-64px.png" class="position-absolute" style="height: 20px; margin-left: 5px; margin-top: 2px;">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div style="height: 60px;"></div>
+    <div class="container mt-4">
+        <img src="assets/details/Main_Circle.png" class="position-absolute circles">
+        <img src="assets/details/Semi_Circle_1.png" class="position-absolute circles" style="animation: spin-1 15s linear 0s infinite normal;">
+        <img src="assets/details/Semi_Circle_2.png" class="position-absolute circles" style="animation: spin-2 25s linear 0s infinite reverse;">
+        <img src="assets/details/Extras.png" class="position-absolute circles">
+    </div>
+    <div class="px-4 py-5 text-center text-white" style="margin: 125px 0 125px 0;">
+        <h1 class="display-5" style="font-size: 80px;">Peter de Vroom</h1>
+        <div>
+            <p class="lead">Software Developer</p>
+        </div>
+    </div>
+
+    <!-- About -->
+    <div id="about" class="bg-white px-4 py-5 my-5">
+        <h1 class="display-5 text-center">About</h1>
+        <div class="container" style="margin-left: 10%">
+            <div class="container my-4">
+                <div class="row">
+                    <div class="col-auto position-relative">
+                        <img src="assets/Profile Square.jpg" class="profile-img">
+                        <img src="assets/details/Semi_Circle_1_Purple.png" class="position-absolute" style="width: 350px; left: -75px; top: -75px; margin-left: 12px;">
+                        <img src="assets/details/Extras_Purple.png" class="position-absolute" style="width: 270px; left: -35px; top: -35px; margin-left: 12px;">
+
+                    </div>
+                    <div class="col ms-4 text-center" style="margin: auto;">
+                        <p>
+                            Peter de Vroom is a software development student studying at the University of Technology Sydney in Australia.<br>
+                            Peter has focused his studies on creating performant and effecient software by leveraging his skills in <strong>C, C# and Java</strong>.
+                        </p>
+                        <p>
+                            Having completed a Bachelor of Music and a Graduate Certificate in Media Arts and Production, Peter is also an accomplished musician. <br>
+                            Drawing on his experiences in music, Peter believes that <strong> software developement is as much a creative pursuit as it is technical.</strong>
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects -->
+    <div id="projects" class="px-4 pb-3">
+        <div class="container text-white">
+            <h1 class="display-5 text-center">Projects</h1>
+            <div class="container my-4">
+                <!-- Carousel -->
+                <div id="projectCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="assets/projects/BUCAM_Grad.jpg" class="d-block w-75 center-img" alt="Desktop App Example">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Security Access Manager App</h5>
+                                <p>Desktop application written in C#/WPF leveraging the MVVM pattern. The application interfaces with external hardware to control door locks</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/projects/TODO_Grad.jpg" class="d-block w-75 center-img" alt="Godot Engine Plug-in">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Godot Engine Todo Plugin</h5>
+                                <p>Free and open-source plugin for the Godot Game Engine. Source available at <a href="https://github.com/OrigamiDev-Pete/TODO_Manager" target="_blank">Github</a>.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/projects/Website.png" class="d-block w-75 center-img" alt="Website Example">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>This Website</h5>
+                                <p>This website was designed and created by Peter utilising Bootstrap for extra styles. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact" class="bg-white px-4 py-5 my-5">
+        <div class="container">
+            <h1 class="display-5 ms-5 text-center">Contact</h1>
+            <div class="container my-4">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
