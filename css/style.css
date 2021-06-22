@@ -6,6 +6,7 @@ body {
     background: #4e54c8;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #8f94fb, #4e54c8);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #8f94fb, #4e54c8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100%;
 }
 
 .gradient-2 {
@@ -23,6 +24,10 @@ body {
 
 .title {
     font-size: 80px;
+}
+
+.header-container {
+    margin: 125px 0 125px 0;
 }
 
 .about-container {
@@ -56,13 +61,18 @@ body {
 
 @media screen and (max-width: 600px) {
     .circles {
-        height: 350px;
+        height: auto;
+        width: 60%;
         top: 100px;
-        margin-left: -175px;
+        margin-left: -30%;
     }
 
     .title {
         font-size: 60px;
+    }
+
+    .header-container {
+        margin: 50px 0 50px 0;
     }
 
     .profile-img-container {
@@ -75,5 +85,15 @@ body {
 
     .row-breaker {
         width: 100%;
+    }
+
+    .mobile-big {
+        width: 100% !important; 
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .title {
+        font-size: 50px;
     }
 }
