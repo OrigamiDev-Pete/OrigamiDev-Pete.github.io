@@ -14,15 +14,6 @@ body {
     background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.nav-capsule {
-    background: white;
-    margin: 0 30px 0 30px;
-    position: fixed;
-    transform: translateY(-50px);
-    width: auto;
-    z-index: 0;
-}
-
 .circles {
     height: 500px; 
     top: 50px; 
@@ -30,10 +21,22 @@ body {
     margin-left: -250px;
 }
 
+.title {
+    font-size: 80px;
+}
+
+.about-container {
+    margin-left: 10%
+}
+
 .profile-img {
     width: 200px;
     height: 200px;
     border-radius: 100%;
+}
+
+.row-breaker {
+    width: 0;
 }
 
 .center-img {
@@ -49,4 +52,28 @@ body {
 @keyframes spin-2 {
     from {transform: rotate(0deg);}
     to {transform: rotate(360deg);}
+}
+
+@media screen and (max-width: 600px) {
+    .circles {
+        height: 350px;
+        top: 100px;
+        margin-left: -175px;
+    }
+
+    .title {
+        font-size: 60px;
+    }
+
+    .profile-img-container {
+        margin: 0 auto 35px auto;
+    }
+
+    .about-container {
+        margin: 0;
+    }
+
+    .row-breaker {
+        width: 100%;
+    }
 }
