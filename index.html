@@ -18,10 +18,26 @@
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.webmanifest">
     <script src="js/bootstrap.js"></script>
 </head>
 <body class="gradient">
 
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/serviceworker.js')
+                .then((registration) => {
+                    console.log('service worker registered successfully ${registration}')
+                })
+                .catch((err) => {
+                    console.log('Error registering ${err}')
+                })
+            })
+        } else {
+            console.log('Service worker is not supported in this browser')
+        }
+    </script>
     <!-- Navbar -->
     <nav class="navbar navbar-light navbar-expand-sm bg-white fixed-top shadow-sm">
         <div class="container-fluid">
@@ -41,9 +57,9 @@
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/OrigamiDev-Pete" target="_blank">
+                        <a class="nav-link" href="https://github.com/OrigamiDev-Pete" target="_blank" rel="noopener">
                             <span>Github</span>
-                            <img src="assets/GitHub-Mark-64px.png" class="position-absolute" style="height: 20px; margin-left: 5px; margin-top: 2px;">
+                            <img src="assets/GitHub-Mark-64px.png" class="position-absolute" style="height: 20px; margin-left: 5px; margin-top: 2px;" alt="Github logo">
                         </a>
                     </li>
 
@@ -55,10 +71,10 @@
     <!-- Header -->
     <div style="height: 60px;"></div>
     <div class="container mt-4">
-        <img src="assets/details/Main_Circle.png" class="position-absolute circles">
-        <img src="assets/details/Semi_Circle_1.png" class="position-absolute circles" style="animation: spin-1 15s linear 0s infinite normal;">
-        <img src="assets/details/Semi_Circle_2.png" class="position-absolute circles" style="animation: spin-2 25s linear 0s infinite reverse;">
-        <img src="assets/details/Extras.png" class="position-absolute circles">
+        <img src="assets/details/Main_Circle.png" class="position-absolute circles" alt="Circle graphic 1">
+        <img src="assets/details/Semi_Circle_1.png" class="position-absolute circles" style="animation: spin-1 15s linear 0s infinite normal;" alt="Circle graphic 2">
+        <img src="assets/details/Semi_Circle_2.png" class="position-absolute circles" style="animation: spin-2 25s linear 0s infinite reverse;" alt="Circle graphic 3">
+        <img src="assets/details/Extras.png" class="position-absolute circles" alt="Detail graphic">
     </div>
     <div class="px-4 py-5 text-center text-white header-container">
         <h1 class="title display-5">Peter de Vroom</h1>
@@ -74,9 +90,9 @@
             <div class="container my-4">
                 <div class="row">
                     <div class="col-auto position-relative profile-img-container">
-                        <img src="assets/Profile Square.jpg" class="profile-img">
-                        <img src="assets/details/Semi_Circle_1_Purple.png" class="position-absolute" style="width: 350px; left: -75px; top: -75px; margin-left: 12px;">
-                        <img src="assets/details/Extras_Purple.png" class="position-absolute" style="width: 270px; left: -35px; top: -35px; margin-left: 12px;">
+                        <img src="assets/Profile Square.jpg" class="profile-img" alt="Profile image">
+                        <img src="assets/details/Semi_Circle_1_Purple.png" class="position-absolute" style="width: 350px; left: -75px; top: -75px; margin-left: 12px;" alt="Circle graphic 4">
+                        <img src="assets/details/Extras_Purple.png" class="position-absolute" style="width: 270px; left: -35px; top: -35px; margin-left: 12px;" alt="Detail graphic 2">
 
                     </div>
                     <div class="row-breaker"></div>
@@ -111,7 +127,7 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <a href="assets/projects/BUCAM.png" target="_blank">
+                            <a href="assets/projects/BUCAM.png" target="_blank" rel="noopener">
                                 <img src="assets/projects/BUCAM_Grad.jpg" class="d-block w-75 center-img mobile-big" alt="Desktop App Example">
                             </a>
                             <div class="carousel-caption d-none d-md-block">
@@ -120,12 +136,12 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <a href="assets/projects/TODO.jpg" target="_blank">
+                            <a href="assets/projects/TODO.jpg" target="_blank" rel="noopener">
                                 <img src="assets/projects/TODO_Grad.jpg" class="d-block w-75 center-img mobile-big" alt="Godot Engine Plug-in">
                             </a>
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Godot Engine Todo Plugin</h5>
-                                <p>Free and open-source plugin for the Godot Game Engine. Source available at <a href="https://github.com/OrigamiDev-Pete/TODO_Manager" target="_blank">Github</a>.</p>
+                                <p>Free and open-source plugin for the Godot Game Engine. Source available at <a href="https://github.com/OrigamiDev-Pete/TODO_Manager" target="_blank" rel="noopener">Github</a>.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -138,7 +154,7 @@
                     </div>
                 </div>
 
-                <p class="mt-4">To check out more of Peter's work, go to <a href="https://github.com/OrigamiDev-Pete" target="_blank" class="text-white">Github</a>.</p>
+                <p class="mt-4">To check out more of Peter's work, go to <a href="https://github.com/OrigamiDev-Pete" target="_blank" rel="noopener" class="text-white">Github</a>.</p>
             </div>
         </div>
     </div>
