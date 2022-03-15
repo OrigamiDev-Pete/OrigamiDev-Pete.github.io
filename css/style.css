@@ -30,9 +30,9 @@ body {
     margin: 125px 0 125px 0;
 }
 
-.about-container {
+/* .about-container {
     margin-left: 10%
-}
+} */
 
 .profile-img {
     width: 200px;
@@ -46,6 +46,7 @@ body {
 
 .about-text {
     margin-left: 20px;
+    align-self: center;
 }
 
 .center-img {
