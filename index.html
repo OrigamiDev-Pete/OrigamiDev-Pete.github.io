@@ -21,6 +21,14 @@
     <link rel="manifest" href="manifest.webmanifest">
     <script src="js/bootstrap.js"></script>
 </head>
+<script type="importmap">
+	{
+		"imports": {
+			"three": "./js/three/three.module.js"
+		}
+	}
+	</script>
+<script type="module" src="js/three/main.js"></script>
 <body class="gradient">
 
     <script>
@@ -69,17 +77,20 @@
     </nav>
 
     <!-- Header -->
+    <canvas id="c"></canvas>
     <div style="height: 60px;"></div>
     <div class="container mt-4">
-        <img src="assets/details/Main_Circle.png" class="position-absolute circles" alt="Circle graphic 1">
-        <img src="assets/details/Semi_Circle_1.png" class="position-absolute circles" style="animation: spin-1 15s linear 0s infinite normal;" alt="Circle graphic 2">
-        <img src="assets/details/Semi_Circle_2.png" class="position-absolute circles" style="animation: spin-2 25s linear 0s infinite reverse;" alt="Circle graphic 3">
-        <img src="assets/details/Extras.png" class="position-absolute circles" alt="Detail graphic">
+        <div>
+            <img src="assets/details/Main_Circle.png" class="position-absolute circles" alt="Circle graphic 1">
+            <img src="assets/details/Semi_Circle_1.png" class="position-absolute circles" style="animation: spin-1 15s linear 0s infinite normal;" alt="Circle graphic 2">
+            <img src="assets/details/Semi_Circle_2.png" class="position-absolute circles" style="animation: spin-2 25s linear 0s infinite reverse;" alt="Circle graphic 3">
+            <img src="assets/details/Extras.png" class="position-absolute circles" alt="Detail graphic">
+        </div>
     </div>
     <div class="px-4 py-5 text-center text-white header-container">
-        <h1 class="title display-5">Peter de Vroom</h1>
+        <h1 class="title display-5 t-shadow">Peter de Vroom</h1>
         <div>
-            <p class="lead">Software Developer</p>
+            <p class="lead t-shadow">Software Developer</p>
         </div>
     </div>
 
@@ -116,7 +127,7 @@
     <!-- Projects -->
     <div id="projects" class="px-4 pb-3">
         <div class="container text-white text-center">
-            <h1 class="display-5 mb-5">Projects</h1>
+            <h1 class="display-5 t-shadow mb-5">Projects</h1>
             <div class="container my-4">
                 <!-- Carousel -->
                 <div id="projectCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -148,7 +159,7 @@
                             <img src="assets/projects/Website.png" class="d-block w-75 center-img mobile-big" alt="Website Example">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>This Website</h5>
-                                <p>This website was designed and created by Peter utilising Bootstrap for extra styles. </p>
+                                <p>This website was designed and created by Peter using Three.JS for the custom WebGL graphics.</p>
                             </div>
                         </div>
                     </div>

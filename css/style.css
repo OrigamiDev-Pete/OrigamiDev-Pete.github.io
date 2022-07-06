@@ -2,6 +2,14 @@ body {
     overflow-x: hidden;
 }
 
+#c {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: fixed;
+    z-index: -2;
+}
+
 .gradient {
     background: #4e54c8;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #8f94fb, #4e54c8);  /* Chrome 10-25, Safari 5.1-6 */
@@ -28,6 +36,10 @@ body {
 
 .header-container {
     margin: 125px 0 125px 0;
+}
+
+.t-shadow {
+    text-shadow: 5px 5px 10px #0F2027;
 }
 
 /* .about-container {
