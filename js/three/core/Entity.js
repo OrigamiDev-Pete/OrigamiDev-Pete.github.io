@@ -1,4 +1,4 @@
-import { Object3D } from "three";
+import { Object3D } from "../three.module.js";
 /**
  * Abstract Entity Class
  * @class Entity

@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import * as THREE from './three.module.js';
 import { deg2rad } from './core/MathHelper.js';
 import SceneTree from './core/SceneTree.js';
 import { EffectComposer } from './postprocessing/EffectComposer.js';
