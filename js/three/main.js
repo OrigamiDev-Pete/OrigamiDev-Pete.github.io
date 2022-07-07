@@ -74,6 +74,7 @@ function mainLoop() {
 }
 
 function onWindowResize() {
+    console.log("here");
     const canvas = renderer.domElement;
     camera.aspect = canvas.clientWidth / canvas.clientHeight;
     // camera.aspect = window.innerWidth / window.innerHeight;
@@ -86,12 +87,9 @@ function onWindowResize() {
 
 window.addEventListener('resize', onWindowResize);
 
-document.addEventListener('keydown', e => {
-    setCamera(camera);
-});
-
-document.addEventListener('click', e => {
-    setCamera(camera);
+screen.orientation.addEventListener('change', () => {
+    // recalculating the canvas size needs to be delayed until after reorientation is complete.
+    setTimeout(onWindowResize, 1);
 });
 
 // Call the first mainLoop after everything has finished loading
